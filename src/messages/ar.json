@@ -1,0 +1,101 @@
+{
+    "common": {
+        "appName": "بوابة موردي ريفي",
+        "welcome": "مرحباً",
+        "loading": "جاري التحميل...",
+        "submit": "إرسال",
+        "cancel": "إلغاء",
+        "next": "التالي",
+        "previous": "السابق",
+        "save": "حفظ",
+        "edit": "تعديل",
+        "delete": "حذف",
+        "confirm": "تأكيد",
+        "search": "بحث",
+        "filter": "تصفية",
+        "logout": "تسجيل خروج",
+        "login": "تسجيل دخول",
+        "signup": "إنشاء حساب",
+        "dashboard": "لوحة التحكم"
+    },
+    "auth": {
+        "loginTitle": "تسجيل الدخول إلى حسابك",
+        "signupTitle": "إنشاء حساب مورد",
+        "email": "البريد الإلكتروني",
+        "password": "كلمة المرور",
+        "forgotPassword": "نسيت كلمة المرور؟",
+        "noAccount": "ليس لديك حساب؟",
+        "hasAccount": "لديك حساب بالفعل؟",
+        "signupLink": "سجل هنا",
+        "loginLink": "سجل دخول هنا"
+    },
+    "signup": {
+        "title": "تسجيل الموردين",
+        "subtitle": "انضم إلى شبكة ريفي من الموردين الموثوقين",
+        "step1Title": "بيانات الشركة",
+        "step2Title": "فئات الخدمة",
+        "step3Title": "معلومات الاتصال",
+        "companyName": "اسم الشركة",
+        "companyNamePlaceholder": "أدخل اسم شركتك",
+        "licenseNumber": "رقم الترخيص",
+        "licenseNumberPlaceholder": "أدخل رقم الترخيص",
+        "location": "الموقع",
+        "locationPlaceholder": "اختر الموقع",
+        "serviceCategories": "فئات الخدمة",
+        "selectServices": "اختر الخدمات التي تقدمها",
+        "carpentry": "نجارة",
+        "painting": "دهان",
+        "electrical": "كهرباء",
+        "plumbing": "سباكة",
+        "hvac": "تكييف وتبريد",
+        "flooring": "أرضيات",
+        "contactPerson": "الشخص المسؤول",
+        "contactPersonPlaceholder": "الاسم الكامل",
+        "phoneNumber": "رقم الهاتف",
+        "phoneNumberPlaceholder": "+966 XXX XXX XXX",
+        "emailAddress": "البريد الإلكتروني",
+        "emailPlaceholder": "company@example.com",
+        "validation": {
+            "companyNameRequired": "اسم الشركة مطلوب",
+            "licenseRequired": "رقم الترخيص مطلوب",
+            "locationRequired": "الموقع مطلوب",
+            "servicesRequired": "يجب اختيار خدمة واحدة على الأقل",
+            "contactPersonRequired": "اسم الشخص المسؤول مطلوب",
+            "phoneRequired": "رقم الهاتف مطلوب",
+            "emailRequired": "البريد الإلكتروني مطلوب",
+            "emailInvalid": "صيغة البريد الإلكتروني غير صحيحة"
+        },
+        "success": "تم التسجيل بنجاح! جاري التوجيه إلى لوحة التحكم...",
+        "error": "فشل التسجيل. يرجى المحاولة مرة أخرى."
+    },
+    "dashboard": {
+        "title": "لوحة تحكم المورد",
+        "welcome": "مرحباً بعودتك",
+        "projects": "المشاريع",
+        "myProjects": "مشاريعي",
+        "noProjects": "لا توجد مشاريع",
+        "projectStatus": {
+            "completed": "مكتمل",
+            "inProgress": "قيد التنفيذ",
+            "pending": "قيد الانتظار"
+        },
+        "projectDetails": {
+            "location": "الموقع",
+            "date": "التاريخ",
+            "type": "النوع",
+            "status": "الحالة"
+        },
+        "stats": {
+            "total": "إجمالي المشاريع",
+            "completed": "مكتمل",
+            "active": "نشط",
+            "pending": "قيد الانتظار"
+        }
+    },
+    "errors": {
+        "generic": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+        "network": "خطأ في الشبكة. يرجى التحقق من الاتصال.",
+        "notFound": "الصفحة غير موجودة",
+        "unauthorized": "ليس لديك صلاحية لعرض هذه الصفحة"
+    }
+}

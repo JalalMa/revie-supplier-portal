@@ -1,0 +1,101 @@
+{
+    "common": {
+        "appName": "Revie Supplier Portal",
+        "welcome": "Welcome",
+        "loading": "Loading...",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "next": "Next",
+        "previous": "Previous",
+        "save": "Save",
+        "edit": "Edit",
+        "delete": "Delete",
+        "confirm": "Confirm",
+        "search": "Search",
+        "filter": "Filter",
+        "logout": "Logout",
+        "login": "Login",
+        "signup": "Sign Up",
+        "dashboard": "Dashboard"
+    },
+    "auth": {
+        "loginTitle": "Login to Your Account",
+        "signupTitle": "Create Supplier Account",
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot Password?",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?",
+        "signupLink": "Sign up here",
+        "loginLink": "Login here"
+    },
+    "signup": {
+        "title": "Supplier Registration",
+        "subtitle": "Join Revie's network of trusted suppliers",
+        "step1Title": "Company Details",
+        "step2Title": "Service Categories",
+        "step3Title": "Contact Information",
+        "companyName": "Company Name",
+        "companyNamePlaceholder": "Enter your company name",
+        "licenseNumber": "License Number",
+        "licenseNumberPlaceholder": "Enter license number",
+        "location": "Location",
+        "locationPlaceholder": "Select location",
+        "serviceCategories": "Service Categories",
+        "selectServices": "Select the services you provide",
+        "carpentry": "Carpentry",
+        "painting": "Painting",
+        "electrical": "Electrical",
+        "plumbing": "Plumbing",
+        "hvac": "HVAC",
+        "flooring": "Flooring",
+        "contactPerson": "Contact Person",
+        "contactPersonPlaceholder": "Full name",
+        "phoneNumber": "Phone Number",
+        "phoneNumberPlaceholder": "+966 XXX XXX XXX",
+        "emailAddress": "Email Address",
+        "emailPlaceholder": "company@example.com",
+        "validation": {
+            "companyNameRequired": "Company name is required",
+            "licenseRequired": "License number is required",
+            "locationRequired": "Location is required",
+            "servicesRequired": "At least one service must be selected",
+            "contactPersonRequired": "Contact person name is required",
+            "phoneRequired": "Phone number is required",
+            "emailRequired": "Email is required",
+            "emailInvalid": "Invalid email format"
+        },
+        "success": "Registration successful! Redirecting to dashboard...",
+        "error": "Registration failed. Please try again."
+    },
+    "dashboard": {
+        "title": "Supplier Dashboard",
+        "welcome": "Welcome back",
+        "projects": "Projects",
+        "myProjects": "My Projects",
+        "noProjects": "No projects found",
+        "projectStatus": {
+            "completed": "Completed",
+            "inProgress": "In Progress",
+            "pending": "Pending"
+        },
+        "projectDetails": {
+            "location": "Location",
+            "date": "Date",
+            "type": "Type",
+            "status": "Status"
+        },
+        "stats": {
+            "total": "Total Projects",
+            "completed": "Completed",
+            "active": "Active",
+            "pending": "Pending"
+        }
+    },
+    "errors": {
+        "generic": "Something went wrong. Please try again.",
+        "network": "Network error. Please check your connection.",
+        "notFound": "Page not found",
+        "unauthorized": "You are not authorized to view this page"
+    }
+}
