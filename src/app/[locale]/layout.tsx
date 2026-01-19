@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { Header } from '@/components/layout/Header';
 import "../globals.css";
 
 const geistSans = Geist({
@@ -50,7 +50,7 @@ export default async function LocaleLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <NextIntlClientProvider messages={messages}>
-                    <LanguageSwitcher />
+                    <Header />
                     {children}
                 </NextIntlClientProvider>
             </body>
