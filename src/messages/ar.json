@@ -1,6 +1,6 @@
 {
     "common": {
-        "appName": "بوابة موردي ريفي",
+        "appName": "بوابة موردي رڤي",
         "welcome": "مرحباً",
         "loading": "جاري التحميل...",
         "submit": "إرسال",
@@ -32,12 +32,12 @@
     },
     "signup": {
         "title": "تسجيل الموردين",
-        "subtitle": "انضم إلى شبكة ريفي من الموردين الموثوقين",
+        "subtitle": "انضم إلى شبكة رڤي من الموردين الموثوقين",
         "stepProgress": "الخطوة {current} من {total}",
         "step1Title": "بيانات الشركة",
         "step1Description": "أدخل معلومات شركتك وتفاصيل الترخيص التجاري",
         "step2Title": "فئات الخدمة",
-        "step2Description": "اختر الخدمات التي تقدمها شركتك لريفي",
+        "step2Description": "اختر الخدمات التي تقدمها شركتك لرڤي",
         "step3Title": "معلومات الاتصال",
         "step3Description": "أدخل بيانات الاتصال الخاصة بك للتواصل",
         "companyName": "اسم الشركة",
@@ -141,11 +141,35 @@
         "error": "فشل التسجيل. يرجى المحاولة مرة أخرى."
     },
     "dashboard": {
-        "title": "لوحة تحكم المورد",
-        "welcome": "مرحباً بعودتك",
-        "projects": "المشاريع",
+        "title": "لوحة التحكم",
+        "subtitle": "إدارة مشاريعك وتتبع التقدم",
+        "welcome": "مرحباً",
         "myProjects": "مشاريعي",
+        "projectsTitle": "مشاريعي",
+        "nav": {
+            "dashboard": "لوحة التحكم",
+            "projects": "المشاريع",
+            "profile": "الملف الشخصي",
+            "settings": "الإعدادات"
+        },
+        "search": "بحث",
+        "searchPlaceholder": "البحث في المشاريع...",
+        "statusFilter": "الحالة",
+        "statusAll": "الكل",
+        "statusCompleted": "مكتملة",
+        "statusInProgress": "قيد التنفيذ",
+        "statusPending": "قيد الانتظار",
+        "projectName": "اسم المشروع",
+        "type": "النوع",
+        "location": "الموقع",
+        "date": "التاريخ",
+        "status": "الحالة",
         "noProjects": "لا توجد مشاريع",
+        "noProjectsDescription": "حاول تعديل الفلاتر أو استعلام البحث",
+        "projects": "المشاريع",
+        "actions": "الإجراءات",
+        "viewProject": "عرض تفاصيل المشروع",
+        "deleteProject": "حذف المشروع",
         "projectStatus": {
             "completed": "مكتمل",
             "inProgress": "قيد التنفيذ",
@@ -160,6 +184,7 @@
         "stats": {
             "total": "إجمالي المشاريع",
             "completed": "مكتمل",
+            "inProgress": "قيد التنفيذ",
             "active": "نشط",
             "pending": "قيد الانتظار"
         }

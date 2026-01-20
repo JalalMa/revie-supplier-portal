@@ -14,22 +14,22 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className={`flex items-center gap-2 bg-background/80 backdrop-blur-sm border rounded-lg p-2 shadow-lg `}>
+        <div className={`flex items-center gap-1 sm:gap-2 bg-background/80 backdrop-blur-sm border rounded-lg p-2 shadow-lg `}>
             <Globe className="w-4 h-4 text-muted-foreground" />
             <button
                 onClick={() => switchLanguage('en')}
-                className={`px-3 py-1 rounded transition-colors ${locale === 'en'
-                    ? 'bg-primary text-primary-foreground'
-                    : 'hover:bg-secondary'
+                className={`px-3 py-1 rounded transition-colors text-sm sm:text-base  ${locale === 'en'
+                    ? 'bg-primary text-primary-foreground cursor-not-allowed'
+                    : 'hover:bg-secondary cursor-pointer'
                     }`}
             >
                 English
             </button>
             <button
                 onClick={() => switchLanguage('ar')}
-                className={`px-3 py-1 rounded transition-colors ${locale === 'ar'
-                    ? 'bg-primary text-primary-foreground'
-                    : 'hover:bg-secondary'
+                className={`px-3 py-1 rounded transition-colors text-sm sm:text-base ${locale === 'ar'
+                    ? 'bg-primary text-primary-foreground cursor-not-allowed'
+                    : 'hover:bg-secondary cursor-pointer'
                     }`}
             >
                 العربية

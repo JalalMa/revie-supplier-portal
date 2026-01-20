@@ -142,16 +142,40 @@
         "error": "Registration failed. Please try again."
     },
     "dashboard": {
-        "title": "Supplier Dashboard",
-        "welcome": "Welcome back",
-        "projects": "Projects",
+        "title": "Dashboard",
+        "subtitle": "Manage your projects and track progress",
+        "welcome": "Welcome",
         "myProjects": "My Projects",
+        "projectsTitle": "My Projects",
+        "nav": {
+            "dashboard": "Dashboard",
+            "projects": "Projects",
+            "profile": "Profile",
+            "settings": "Settings"
+        },
+        "search": "Search",
+        "searchPlaceholder": "Search projects...",
+        "statusFilter": "Status",
+        "statusAll": "All",
+        "statusCompleted": "Completed",
+        "statusInProgress": "In Progress",
+        "statusPending": "Pending",
+        "projectName": "Project Name",
+        "type": "Type",
+        "location": "Location",
+        "date": "Date",
+        "status": "Status",
         "noProjects": "No projects found",
+        "noProjectsDescription": "Try adjusting your filters or search query",
         "projectStatus": {
             "completed": "Completed",
             "inProgress": "In Progress",
             "pending": "Pending"
         },
+        "projects": "Projects",
+        "actions": "Actions",
+        "viewProject": "View project details",
+        "deleteProject": "Delete project",
         "projectDetails": {
             "location": "Location",
             "date": "Date",
@@ -159,6 +183,7 @@
             "status": "Status"
         },
         "stats": {
+            "inProgress": "In Progress",
             "total": "Total Projects",
             "completed": "Completed",
             "active": "Active",
