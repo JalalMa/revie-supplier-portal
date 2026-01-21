@@ -12,7 +12,7 @@ export default function HomePage() {
                         {t('welcome')} - {t('appName')}
                     </h1>
                     <p className="text-lg text-muted-foreground">
-                        Welcome to the Revie Supplier Portal
+                        Complete Design & Execution Made Easy for Every Space
                     </p>
                 </div>
 
@@ -25,13 +25,13 @@ export default function HomePage() {
                     </Link>
                     <Link
                         href="/login"
-                        className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors"
+                        className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-primary/40 transition-colors"
                     >
                         {t('login')}
                     </Link>
                     <Link
                         href="/dashboard"
-                        className="px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-accent/90 transition-colors"
+                        className="px-6 py-3 bg-accent text-accent-foreground rounded-lg hover:bg-primary/40 transition-colors"
                     >
                         {t('dashboard')}
                     </Link>

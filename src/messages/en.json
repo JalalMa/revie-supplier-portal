@@ -17,7 +17,10 @@
         "logout": "Logout",
         "login": "Login",
         "signup": "Sign Up",
-        "dashboard": "Dashboard"
+        "dashboard": "Dashboard",
+        "comingSoon": "Coming Soon",
+        "comingSoonDescription": "This feature is under construction. We'll have it ready for you soon!",
+        "backToHome": "Back to Dashboard"
     },
     "auth": {
         "loginTitle": "Login to Your Account",
