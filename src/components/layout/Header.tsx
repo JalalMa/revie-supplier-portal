@@ -37,7 +37,7 @@ export function Header() {
 
             {/* Language Switcher - Right for English, Left for Arabic */}
             {!pathname.includes('/dashboard') && (
-                <div className={`fixed top-4 z-50 flex items-center gap-2  ${isRTL ? 'start-4' : 'end-4'}`}>
+                <div className={`fixed top-4 z-50 flex items-center gap-2 ${isRTL ? 'left-4' : 'right-4'}`}>
                     <LanguageSwitcher />
                 </div>
 

@@ -5,6 +5,7 @@ import { DashboardHeader } from './DashboardHeader';
 import { Sidebar } from './Sidebar';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
+import { useLocale } from 'next-intl';
 
 interface DashboardLayoutProps {
     contactName: string;
@@ -13,6 +14,8 @@ interface DashboardLayoutProps {
 
 export function DashboardLayout({ contactName, children }: DashboardLayoutProps) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const locale = useLocale();
+    const isRTL = locale === 'ar';
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -20,9 +23,9 @@ export function DashboardLayout({ contactName, children }: DashboardLayoutProps)
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
             {/* Main Content Area */}
-            <div className="lg:pl-64">
+            <div className={isRTL ? 'lg:pr-64' : 'lg:pl-64'}>
                 {/* Mobile menu button */}
-                <div className="lg:hidden fixed top-4 start-2 z-30">
+                <div className={`lg:hidden fixed top-4 z-30 ${isRTL ? 'right-2' : 'left-2'}`}>
                     <Button
                         variant="outline"
                         size="icon"

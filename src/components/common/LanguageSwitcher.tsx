@@ -14,7 +14,7 @@ export default function LanguageSwitcher() {
     };
 
     return (
-        <div className={`flex items-center gap-1 sm:gap-2 bg-background/80 backdrop-blur-sm border rounded-lg p-2 shadow-lg `}>
+        <div className={`flex items-center gap-1 sm:gap-2 bg-background/80 backdrop-blur-sm border rounded-lg p-2 shadow-lg shadow-primary/20 `}>
             <Globe className="w-4 h-4 text-muted-foreground" />
             <button
                 onClick={() => switchLanguage('en')}

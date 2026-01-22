@@ -41,9 +41,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Sidebar */}
             <aside
                 className={cn(
-                    'fixed top-0 left-0 h-full bg-white border-r border-gray-200 z-50 transition-transform duration-300 ease-in-out',
-                    'w-64 lg:translate-x-0',
-                    isOpen ? 'translate-x-0' : '-translate-x-full'
+                    'fixed top-0 h-full bg-white z-50 transition-transform duration-300 ease-in-out w-64',
+                    isRTL ? 'right-0 border-l border-gray-200 lg:translate-x-0' : 'left-0 border-r border-gray-200 lg:translate-x-0',
+                    isOpen ? 'translate-x-0' : (isRTL ? 'translate-x-full' : '-translate-x-full')
                 )}
             >
                 {/* Sidebar header */}
@@ -81,7 +81,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         return (
                             <Link
                                 key={item.href}
-                                href={`/en${item.href}`}
+                                href={`/${locale}${item.href}`}
                                 className={cn(
                                     'flex items-center gap-3 px-4 py-3 rounded-lg transition-colors',
                                     'hover:bg-gray-100',
