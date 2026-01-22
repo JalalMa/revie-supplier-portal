@@ -20,7 +20,9 @@
         "dashboard": "لوحة التحكم",
         "comingSoon": "قريباً",
         "comingSoonDescription": "هذه الميزة قيد التطوير. سنجهزها لك قريباً!",
-        "backToHome": "العودة إلى لوحة التحكم"
+        "backToHome": "العودة إلى لوحة التحكم",
+        "Complete Design and Execution Made Easy for Every Space": "تصميم كامل وتنفيذ سهل لكل مكان",
+        "your supplier portal is here": "بوابة موردي رڤي"
     },
     "auth": {
         "loginTitle": "تسجيل الدخول إلى حسابك",

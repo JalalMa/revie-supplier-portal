@@ -1,19 +1,14 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { usePathname } from '@/i18n/routing';
 import Image from 'next/image';
 import Link from 'next/link';
 import LanguageSwitcher from '../common/LanguageSwitcher';
 
 export function Header() {
     const locale = useLocale();
-    const router = useRouter();
     const pathname = usePathname();
-
-    const switchLanguage = (newLocale: 'en' | 'ar') => {
-        router.replace(pathname, { locale: newLocale });
-    };
 
     const isRTL = locale === 'ar';
 
@@ -42,10 +37,12 @@ export function Header() {
 
             {/* Language Switcher - Right for English, Left for Arabic */}
             {!pathname.includes('/dashboard') && (
-                <div className={`fixed top-4 z-50 flex items-center gap-2 bg-background/80 backdrop-blur-sm border rounded-lg p-2 shadow-lg ${isRTL ? 'left-4' : 'right-4'}`}>
+                <div className={`fixed top-4 z-50 flex items-center gap-2  ${isRTL ? 'start-4' : 'end-4'}`}>
                     <LanguageSwitcher />
                 </div>
+
             )}
+
         </>
     );
 }

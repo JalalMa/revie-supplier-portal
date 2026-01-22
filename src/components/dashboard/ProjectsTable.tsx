@@ -70,7 +70,7 @@ export function ProjectsTable({ projects, onDeleteProject }: ProjectsTableProps)
                                     <TableCell>{isArabic ? project.location_ar : project.location}</TableCell>
                                     <TableCell>{new Date(project.date).toLocaleDateString()}</TableCell>
                                     <TableCell>
-                                        <Badge variant={STATUS_CONFIG[project.status].variant} className="flex items-center gap-1 w-fit">
+                                        <Badge variant={STATUS_CONFIG[project.status].variant} className="flex items-center gap-1 w-[100px]">
                                             <StatusIcon className="h-3.5 w-3.5" />
                                             {isArabic ? STATUS_CONFIG[project.status].label_ar : STATUS_CONFIG[project.status].label}
                                         </Badge>
@@ -80,7 +80,7 @@ export function ProjectsTable({ projects, onDeleteProject }: ProjectsTableProps)
                                             <Button
                                                 variant="ghost"
                                                 size="icon"
-                                                className="h-8 w-8 text-gray-600 hover:text-blue-600"
+                                                className="h-8 w-8 text-gray-600 hover:text-blue-600 cursor-pointer"
                                                 title={t('dashboard.viewProject')}
                                             >
                                                 <Eye className="h-4 w-4" />
@@ -88,7 +88,7 @@ export function ProjectsTable({ projects, onDeleteProject }: ProjectsTableProps)
                                             <Button
                                                 variant="ghost"
                                                 size="icon"
-                                                className="h-8 w-8 text-gray-600 hover:text-red-600"
+                                                className="h-8 w-8 text-gray-600 hover:text-red-600 cursor-pointer"
                                                 onClick={() => onDeleteProject?.(project.id)}
                                                 title={t('dashboard.deleteProject')}
                                             >

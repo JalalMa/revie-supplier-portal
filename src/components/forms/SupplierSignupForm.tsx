@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Loader2 } from 'lucide-react';
+import { FadeIn } from '@/components/common/FadeIn';
 
 export function SupplierSignupForm() {
     const t = useTranslations();
@@ -95,88 +96,92 @@ export function SupplierSignupForm() {
 
     return (
         <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-blue-50 to-indigo-100 ">
-            <Card className="w-full max-w-2xl max-h-[70vh] md:max-h-[80vh] overflow-y-auto  my-8">
-                <CardHeader>
-                    <div className="space-y-4">
-                        {/* Step Progress */}
-                        <div className="space-y-2">
-                            <div className="flex justify-between text-sm text-muted-foreground">
-                                <span>{t('signup.stepProgress', { current: currentStep, total: getTotalSteps() })}</span>
-                                <span>{Math.round(progressPercentage)}%</span>
+            <FadeIn className="w-full max-w-2xl max-h-[70vh] md:max-h-[80vh] overflow-y-auto my-8">
+                <Card>
+                    <CardHeader>
+                        <div className="space-y-4">
+                            {/* Step Progress */}
+                            <div className="space-y-2">
+                                <div className="flex justify-between text-sm text-muted-foreground">
+                                    <span>{t('signup.stepProgress', { current: currentStep, total: getTotalSteps() })}</span>
+                                    <span>{Math.round(progressPercentage)}%</span>
+                                </div>
+                                <Progress value={progressPercentage} className="h-3" />
                             </div>
-                            <Progress value={progressPercentage} className="h-3" />
+
+                            {/* Step Title */}
+                            <div>
+                                <CardTitle className="text-2xl">{t(currentStepConfig.titleKey)}</CardTitle>
+                                <CardDescription className="mt-2">
+                                    {t(currentStepConfig.descriptionKey)}
+                                </CardDescription>
+                            </div>
                         </div>
+                    </CardHeader>
 
-                        {/* Step Title */}
-                        <div>
-                            <CardTitle className="text-2xl">{t(currentStepConfig.titleKey)}</CardTitle>
-                            <CardDescription className="mt-2">
-                                {t(currentStepConfig.descriptionKey)}
-                            </CardDescription>
-                        </div>
-                    </div>
-                </CardHeader>
-
-                <CardContent>
-                    <div className="space-y-8">
-                        {/* Render current step component */}
-                        {currentStep === 1 && (
-                            <StepCompanyDetails
-                                data={formData}
-                                errors={errors}
-                                onChange={handleFieldChange}
-                            />
-                        )}
-
-                        {currentStep === 2 && (
-                            <StepServiceCategories
-                                data={formData}
-                                errors={errors}
-                                onChange={handleFieldChange}
-                            />
-                        )}
-
-                        {currentStep === 3 && (
-                            <StepContactInfo
-                                data={formData}
-                                errors={errors}
-                                onChange={handleFieldChange}
-                            />
-                        )}
-
-                        {/* Navigation Buttons */}
-                        <div className="flex justify-between pt-6">
-                            <Button
-                                type="button"
-                                variant="outline"
-                                onClick={handleBack}
-                                disabled={isFirstStep(currentStep) || isSubmitting}
-                            >
-                                {t('common.previous')}
-                            </Button>
-
-                            {!isLastStep(currentStep) ? (
-                                <Button
-                                    type="button"
-                                    onClick={handleNext}
-                                    disabled={isSubmitting}
-                                >
-                                    {t('common.next')}
-                                </Button>
-                            ) : (
-                                <Button
-                                    type="button"
-                                    onClick={handleSubmit}
-                                    disabled={isSubmitting}
-                                >
-                                    {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                                    {isSubmitting ? t('common.submitting') : t('common.submit')}
-                                </Button>
+                    <CardContent>
+                        <div className="space-y-8">
+                            {/* Render current step component */}
+                            {currentStep === 1 && (
+                                <StepCompanyDetails
+                                    data={formData}
+                                    errors={errors}
+                                    onChange={handleFieldChange}
+                                />
                             )}
+
+                            {currentStep === 2 && (
+                                <StepServiceCategories
+                                    data={formData}
+                                    errors={errors}
+                                    onChange={handleFieldChange}
+                                />
+                            )}
+
+                            {currentStep === 3 && (
+                                <StepContactInfo
+                                    data={formData}
+                                    errors={errors}
+                                    onChange={handleFieldChange}
+                                />
+                            )}
+
+                            {/* Navigation Buttons */}
+                            <div className="flex justify-between pt-6">
+                                <Button
+                                    type="button"
+                                    variant="outline"
+                                    onClick={handleBack}
+                                    disabled={isFirstStep(currentStep) || isSubmitting}
+                                    className="cursor-pointer"
+                                >
+                                    {t('common.previous')}
+                                </Button>
+
+                                {!isLastStep(currentStep) ? (
+                                    <Button
+                                        type="button"
+                                        onClick={handleNext}
+                                        disabled={isSubmitting}
+                                        className="cursor-pointer"
+                                    >
+                                        {t('common.next')}
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        type="button"
+                                        onClick={handleSubmit}
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                                        {isSubmitting ? t('common.submitting') : t('common.submit')}
+                                    </Button>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                </CardContent>
-            </Card>
+                    </CardContent>
+                </Card>
+            </FadeIn>
         </div>
     );
 }

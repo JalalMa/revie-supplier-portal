@@ -10,6 +10,7 @@ import { ProjectsTable } from '@/components/dashboard/ProjectsTable';
 import { MOCK_PROJECTS } from '@/lib/mock-projects';
 import { Project, ProjectStatus } from '@/types/project';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { FadeIn } from '@/components/common/FadeIn';
 
 export default function DashboardPage() {
     const router = useRouter();
@@ -77,39 +78,46 @@ export default function DashboardPage() {
     return (
         <div className="mt-2">
             <DashboardLayout contactName={contactName}>
-                <div className="space-y-6">
+                <FadeIn className="space-y-6">
                     {/* Page Title */}
-                    <div>
-                        <h2 className="text-3xl font-bold text-gray-900">{t('dashboard.title')}</h2>
-                        <p className="text-gray-600 mt-1">{t('dashboard.subtitle')}</p>
-                    </div>
+                    <FadeIn delay={100}>
+                        <div>
+                            <h2 className="text-3xl font-bold text-gray-900">{t('dashboard.title')}</h2>
+                            <p className="text-gray-600 mt-1">{t('dashboard.subtitle')}</p>
+                        </div>
+                    </FadeIn>
 
                     {/* Stats Cards */}
-                    <StatsCards projects={projects} />
+                    <FadeIn delay={200}>
+                        <StatsCards projects={projects} />
+                    </FadeIn>
 
                     {/* Projects Section */}
-                    <Card>
-                        <CardHeader>
-                            <CardTitle>{t('dashboard.projectsTitle')}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            {/* Filters */}
-                            <ProjectFilters
-                                searchQuery={searchQuery}
-                                statusFilter={statusFilter}
-                                onSearchChange={setSearchQuery}
-                                onStatusChange={(value) => setStatusFilter(value as ProjectStatus | 'all')}
-                            />
+                    <FadeIn delay={300}>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>{t('dashboard.projectsTitle')}</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                {/* Filters */}
+                                <ProjectFilters
+                                    searchQuery={searchQuery}
+                                    statusFilter={statusFilter}
+                                    onSearchChange={setSearchQuery}
+                                    onStatusChange={(value) => setStatusFilter(value as ProjectStatus | 'all')}
+                                />
 
-                            {/* Table */}
-                            <ProjectsTable
-                                projects={filteredProjects}
-                                onDeleteProject={handleDeleteProject}
-                            />
-                        </CardContent>
-                    </Card>
-                </div>
+                                {/* Table */}
+                                <ProjectsTable
+                                    projects={filteredProjects}
+                                    onDeleteProject={handleDeleteProject}
+                                />
+                            </CardContent>
+                        </Card>
+                    </FadeIn>
+                </FadeIn>
             </DashboardLayout>
         </div>
     );
 }
+

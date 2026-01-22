@@ -7,7 +7,7 @@ The application allows suppliers to register via a multi-step form and access a 
 ---
 
 ## 🔗 Live Demo
-👉 **Deployed App:** https://your-vercel-url.vercel.app  
+👉 **Deployed App:** https://revie-supplier-portal.vercel.app  
 👉 **GitHub Repo:** https://github.com/JalalMa/revie-supplier-portal.git  
 
 ---

@@ -85,7 +85,7 @@ export function StepCompanyDetails({ data, errors, onChange }: StepCompanyDetail
                         <SelectTrigger className={errors.country ? 'border-destructive' : ''}>
                             <SelectValue placeholder={t('signup.countryPlaceholder')} />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="cursor-pointer">
                             {COUNTRIES.map((country) => (
                                 <SelectItem key={country.value} value={country.value}>
                                     {country.flag} {t(country.labelKey)}
@@ -100,7 +100,7 @@ export function StepCompanyDetails({ data, errors, onChange }: StepCompanyDetail
 
                 {/* City - Only shown when country is selected */}
                 {data.country && (
-                    <div className="space-y-2">
+                    <div className="space-y-2 cursor-pointer">
                         <Label htmlFor="city">
                             {t('signup.city')} <span className="text-destructive">*</span>
                         </Label>
@@ -108,7 +108,7 @@ export function StepCompanyDetails({ data, errors, onChange }: StepCompanyDetail
                             <SelectTrigger className={errors.city ? 'border-destructive' : ''}>
                                 <SelectValue placeholder={t('signup.cityPlaceholder')} />
                             </SelectTrigger>
-                            <SelectContent>
+                            <SelectContent className="cursor-pointer">
                                 {availableCities.map((city) => (
                                     <SelectItem key={city.value} value={city.value}>
                                         {t(city.labelKey)}

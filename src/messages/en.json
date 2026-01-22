@@ -20,7 +20,9 @@
         "dashboard": "Dashboard",
         "comingSoon": "Coming Soon",
         "comingSoonDescription": "This feature is under construction. We'll have it ready for you soon!",
-        "backToHome": "Back to Dashboard"
+        "backToHome": "Back to Dashboard",
+        "Complete Design and Execution Made Easy for Every Space": "Complete Design & Execution Made Easy for Every Space",
+        "your supplier portal is here": "your supplier portal is here"
     },
     "auth": {
         "loginTitle": "Login to Your Account",
